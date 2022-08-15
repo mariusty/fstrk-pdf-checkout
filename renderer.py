@@ -70,9 +70,7 @@ def _get_current_time_str():
     utcnow = datetime.utcnow()
     moscow_tz = tz.gettz("Europe/Moscow")
     local = utcnow.replace(tzinfo=timezone("UTC")).astimezone(moscow_tz)
-    local_str = local.isoformat().split(".")[0]
-
-    return local_str
+    return local.isoformat().split(".")[0]
 
 
 def upload_file(file_name: str) -> Optional[str]:
